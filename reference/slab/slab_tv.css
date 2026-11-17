@@ -1,0 +1,33 @@
+body.gs .rc.popf{transform:scale(1.06)!important}
+body.gs .rc.popf.foc{box-shadow:none!important}
+body.gs .rc.stack.popf{transform:none!important}
+body.gs .rc.stack.popf .stki.k3x{transform:scale(1.06)!important;transform-origin:left center;box-shadow:none!important;transition:transform .45s var(--sm),left .6s var(--sm),top .6s var(--sm),filter .5s var(--sm)!important}
+body.gs .p5.f .im{transform:translateY(-.7cqw) scale(1.06)!important;transform-origin:left center;box-shadow:none!important}
+body.gs .p5 .ck{right:1.2cqw;top:1.2cqw}
+
+
+/* ===== hierarchy: quiet content, medium floating, thick focus ===== */
+body.gs .gl,body.gs .gld,body.gs .glb{border-color:transparent!important;
+  box-shadow:inset 1px 1px .7px rgba(255,255,255,.3),inset -1px -1.2px 1.2px rgba(0,0,0,.28),inset 0 0 0 1px rgba(255,255,255,.09)!important}
+body.gs .tvtop .gl,body.gs .tvtop .gld,body.gs .tvtop .glb,body.gs .cbar,body.gs .cbar .gl{
+  box-shadow:inset 1.4px 1.4px 1px rgba(255,255,255,.5),inset -1.4px -1.8px 1.8px rgba(0,0,0,.38),inset 0 0 0 1px rgba(255,255,255,.14),0 8px 18px -8px rgba(0,0,0,.5)!important}
+body.gs .gl.foc,body.gs .gld.foc,body.gs .glb.foc,body.gs .gl.f,body.gs .gld.f,body.gs .glb.f{
+  box-shadow:inset 2px 2px 1.4px rgba(255,255,255,.8),inset -2px -2.5px 2.5px rgba(0,0,0,.45),inset 0 0 0 1.5px rgba(255,255,255,.34),inset 0 0 16px 2px rgba(255,255,255,.12),0 1.1cqw 2.2cqw -.5cqw rgba(0,0,0,.65),0 0 2.2cqw rgba(255,255,255,.14)!important;
+  filter:brightness(1.22) saturate(1.1)}
+body.gs #tMovie .dk:not(.foc){opacity:.8}
+body.gs #tMovie .dk{transition:opacity .4s var(--sm),box-shadow .4s var(--sm),filter .4s var(--sm)}
+body.gs .badge,body.gs .ck,body.gs .du,body.gs .bdg,body.gs .pz,body.gs .wt,body.gs .tg,body.gs .mtag2,body.gs .ffbadge,body.gs .need{
+  box-shadow:inset 1px 1px .6px rgba(255,255,255,.4),inset -1px -1px 1px rgba(0,0,0,.3),inset 0 0 0 1px rgba(255,255,255,.1)!important}
+body.gs .rc,body.gs .k3,body.gs .lib,body.gs .p5 .im,body.gs .rc.stack .stki.k3x{
+  box-shadow:inset 1.2px 1.2px .8px rgba(255,255,255,.22),inset -1.2px -1.6px 1.6px rgba(0,0,0,.25),inset 0 0 0 1px rgba(255,255,255,.07)}
+/* demo switch: tiny, out of the title's way */
+.gsbar{margin:0 0 8px}
+.gsbar button{font-size:11px;padding:5px 9px}
+body.fs .gsbar{top:auto;bottom:8px;right:8px;left:auto;opacity:.4}
+body.fs .gsbar:hover{opacity:1}
+body.gs .rc,body.gs .p5 .im,body.gs .k3,body.gs .rc.stack .stki.k3x{transition-timing-function:var(--sm)!important;transition-duration:.55s!important}
+/* calm: no overshoot anywhere in slab mode */
+body.gs #tv{--sp:cubic-bezier(.25,.8,.25,1)}
+body.gs #tv .popf,body.gs #tv .rc.popf{animation:none!important}
+body.gs #tv .rtrack,body.gs #tv .t3,body.gs #tv .trk2,body.gs #tv .eps,body.gs #tv .secs3{transition-duration:.6s!important}
+body.gs #tv .lib,body.gs #tv .app{transition-duration:.55s!important}

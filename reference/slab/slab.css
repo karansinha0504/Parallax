@@ -1,0 +1,27 @@
+/* ===== glass slab focus (toggle: body.gs) ===== */
+@property --gr{syntax:'<length>';inherits:true;initial-value:12px}
+.gslab{position:absolute;left:0;top:0;pointer-events:none;z-index:20;will-change:transform,width,height;contain:layout style;opacity:0;--rim:9px;border-radius:var(--gr);
+  box-shadow:0 1.2cqw 2.4cqw -.6cqw rgba(0,0,0,.65),0 0 2.6cqw .2cqw var(--gc,rgba(255,255,255,.12));transition:opacity .3s var(--sm),box-shadow .5s}
+.gslab.on{opacity:1}
+body:not(.gs) .gslab{display:none}
+.gslab .ed,.gslab .in{display:none}
+.gslab .rg{position:absolute;inset:0;border-radius:inherit;padding:var(--rim);
+  background:linear-gradient(150deg,rgba(255,255,255,.34),rgba(255,255,255,.07) 38%,rgba(255,255,255,0) 60%,rgba(255,255,255,.16));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);mask-composite:exclude}
+.gslab .sp{position:absolute;inset:0;border-radius:inherit;padding:calc(var(--rim)*1.6);
+  background:radial-gradient(55% 40% at 6% 5%,rgba(255,255,255,.34),transparent 70%),radial-gradient(35% 26% at 97% 98%,rgba(255,255,255,.16),transparent 70%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);mask-composite:exclude}
+.gslab .bv{position:absolute;inset:0;border-radius:inherit;box-shadow:inset 2px 2px 1.5px rgba(255,255,255,.7),inset -2px -2.5px 2.5px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.2),inset 0 0 14px 2px rgba(255,255,255,.08)}
+.gslab{--rim:5px;transition:opacity .3s var(--sm),box-shadow .5s,--gr .4s var(--sm)}
+body.gs .zd .app.on,body.gs .lib.foc,body.gs .k3.f{box-shadow:none!important}
+body.gs .k3.f{transform:scale(1.03)!important}
+body.gs .k3.app3.f{transform:scale(1.07)!important}
+body.gs .mhs .k3.f{transform:translateY(-.5cqw) scale(1.03)!important}
+#tShow .g5win{overflow:visible!important;clip-path:inset(0 -20cqw -20cqw -20cqw)}
+#tShow .g5win{-webkit-mask-image:none!important}
+.gsbar{display:flex;gap:6px;align-items:center;justify-content:center;margin:0 0 12px;font-size:13px;color:var(--muted,#9097a8)}
+.gsbar button{font:inherit;font-size:13px;color:var(--muted,#9097a8);background:rgba(128,134,160,.18);border:0;padding:8px 13px;border-radius:10px;cursor:pointer}
+.gsbar button.on{background:#262a38;color:#fff;font-weight:700}
+body.fs .gsbar{position:fixed;z-index:99;margin:0;opacity:.55;right:10px;top:8px}
+body.fs .gsbar span{display:none}
+

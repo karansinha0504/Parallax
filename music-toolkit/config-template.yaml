@@ -1,0 +1,84 @@
+# beets configuration
+# Written automatically by 1-SETUP-run-as-admin.bat
+# Edit any time with menu option 15.
+
+# ---- WHERE THINGS LIVE -------------------------------------------------
+directory: __LIBRARY_DIR__
+library: __LIBRARY_DIR__/beets-library.db
+
+# ---- IMPORT BEHAVIOUR --------------------------------------------------
+import:
+    copy: yes              # copy into the clean library
+    move: no               # NEVER move or delete your originals
+    write: yes             # write corrected tags into the new copies
+    resume: ask            # allow stopping and resuming long imports
+    incremental: yes       # skip folders already done on re-runs
+    quiet_fallback: skip   # if unsure, skip - never guess
+    timid: no              # set to yes to confirm every single match
+    log: __LIBRARY_DIR__/import.log
+
+# ---- MATCH STRICTNESS --------------------------------------------------
+# Deliberately tight. Far better to leave a file untagged than to
+# confidently mislabel it - there is no undo.
+match:
+    strong_rec_thresh: 0.10
+    medium_rec_thresh: 0.25
+    rec_gap_thresh: 0.25
+    max_rec:
+        missing_tracks: low
+        unmatched_tracks: low
+    preferred:
+        countries: ['IN', 'GB', 'US']
+        media: ['Digital Media', 'CD']
+
+# ---- PLUGINS -----------------------------------------------------------
+plugins: chroma fetchart embedart lyrics discogs duplicates badfiles
+         lastgenre scrub missing edit info
+
+# Acoustic fingerprinting - matches by sound, not filename
+chroma:
+    auto: yes
+
+# Discogs - much better Indian coverage than MusicBrainz alone
+discogs:
+    user_token: __DISCOGS_TOKEN__
+    source_weight: 0.5
+
+# Album art - iTunes source is strong for Indian film music
+fetchart:
+    auto: yes
+    minwidth: 500
+    maximum_width: 1200
+    enforce_ratio: yes
+    sources:
+        - filesystem
+        - coverart
+        - itunes
+        - albumart
+        - amazon
+
+embedart:
+    auto: yes
+    maxwidth: 1000
+    remove_art_file: no
+
+# Lyrics - Genius has decent Bollywood coverage
+lyrics:
+    auto: yes
+    sources: [lrclib, genius, tekstowo, google]
+    fallback: ''
+
+lastgenre:
+    auto: yes
+    source: album
+    count: 2
+
+# Strip junk tags left behind by download sites
+scrub:
+    auto: yes
+
+# ---- FILE NAMING -------------------------------------------------------
+paths:
+    default: $albumartist/$album%aunique{}/$track $title
+    singleton: Singles/$artist/$artist - $title
+    comp: Compilations/$album%aunique{}/$track $title

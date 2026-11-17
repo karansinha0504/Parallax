@@ -1,0 +1,10 @@
+/* phone: no focus system; thick glass only on things that float above content */
+#ph .gslab,.gsbar{display:none!important}
+#ph .prc2.popf,#ph .psecs.vmove .popf{transform:none!important;animation:none!important;box-shadow:none!important}
+#ph .prc2.stk.popf .k3x{box-shadow:none!important}
+#ph .pl2.on{box-shadow:none!important}
+#ph .lgrid .ppo.sel .pi{box-shadow:none!important;transform:none!important}
+#ph .phd .pbk,#ph .phd .pfield,#ph .mini,#ph .mini .pp,#ph #pMini .pp,#ph .pdock,#ph .psheet,#ph .ptoast,#ph .lazb{border-color:transparent!important;
+  box-shadow:inset 1.6px 1.6px 1.2px rgba(255,255,255,.55),inset -1.6px -2px 2px rgba(0,0,0,.42),inset 0 0 0 1px rgba(255,255,255,.15),inset 0 0 12px 1px rgba(255,255,255,.06),0 10px 22px -8px rgba(0,0,0,.5)!important}
+#ph .phd .pbk.pgb,#ph .mini .pp.pgb,#ph #pMini .pp{box-shadow:inset 1.8px 1.8px 1.2px rgba(255,255,255,.75),inset -1.6px -2px 2px rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.22),inset 0 0 12px 1px rgba(255,255,255,.1),0 10px 22px -8px rgba(0,0,0,.5)!important}
+#pgh{transition:opacity .45s}
